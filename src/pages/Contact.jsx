@@ -219,7 +219,8 @@ function Contact() {
       <table className="table">
         <thead>
           <tr>
-          <th scope="col">#</th>
+            <th scope="col">#</th>
+            <th scope="col">Avatar</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Contact</th>
