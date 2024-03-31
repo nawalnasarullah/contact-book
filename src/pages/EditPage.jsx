@@ -11,10 +11,10 @@ function EditPage() {
 
     const { contacts } = useSelector(state => state.contactReducer);
 
-    // Find the contact with the given ID
+   
     const contact = contacts.find(contact => contact.id === parseInt(id));
 
-    // State to store updated contact details
+    
     const [updatedContact, setUpdatedContact] = useState(contact || {
         fullName: "",
         Email: "",
@@ -23,14 +23,14 @@ function EditPage() {
         Avatar: ""
     });
 
-    // Update contact handler
+   
     const handleUpdate = (e) => {
         e.preventDefault();
         dispatch(updateContact(updatedContact));
         navigate("/contact");
     }
 
-    // Handle changes in input fields
+  
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUpdatedContact(prevState => ({
@@ -39,7 +39,7 @@ function EditPage() {
         }));
     }
 
-    // Handle changes in image field
+   
     const handleImageChange = (e) => {
         const reader = new FileReader();
         reader.onload = (event) => {
@@ -128,7 +128,7 @@ function EditPage() {
                 </div>
 
                 <div className="col-12">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-dark">
                         Update
                     </button>
                 </div>
